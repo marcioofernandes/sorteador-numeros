@@ -6,6 +6,17 @@ function sortear () {
     let de = parseInt(document.getElementById("de").value);
     let ate = parseInt(document.getElementById("ate").value);
 
+    if (de > ate) {
+      alert ("O número digitado no campo DE é maior que o campo ATÉ");
+      return;
+    }
+
+    if (quantidade > (de - ate + 1)) {
+      alert ("Campo QUANTIDADE deve ser menor ao intervalo mencionado no campo DE e ATE");
+      return;
+        
+    }
+
   let sorteados = [];
 
 // Esse é um loop for, nem aprendi sobre ele nas aulas, pesquisar sobre
